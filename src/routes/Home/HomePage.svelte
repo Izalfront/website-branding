@@ -1,22 +1,70 @@
 <script lang="ts">
 	import CardContent from '../Cards/CardContent.svelte';
 	import DescriptionContent from '../Descriptions/DescriptionContent.svelte';
+
+	let activeTab = 'Home'; // Default tab
+
+	// Function to handle tab click
+	const handleTabClick = (tab: string) => {
+		activeTab = tab;
+	};
 </script>
 
 <div>
 	<div class="flex items-center justify-center pt-8 pb-10">
 		<img class="w-20" src="./Joey.png" alt="" />
 	</div>
-	<!-- header start -->
-	<header class="">
+	<!-- Header start -->
+	<header>
 		<nav>
+			<!-- svelte-ignore a11y_click_events_have_key_events -->
+			<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 			<ul
 				class="flex space-x-4 items-center justify-center py-1 px-1 bg-black text-white rounded-full w-fit mx-auto"
 			>
-				<li class="bg-white text-black px-4 py-2 rounded-full font-medium"><a href="#">Home</a></li>
-				<li class="bg-black text-white px-4 py-2 rounded-full"><a href="#">Projects</a></li>
-				<li class="bg-black text-white px-4 py-2 rounded-full"><a href="#">About</a></li>
-				<li class="bg-black text-white px-4 py-2 rounded-full"><a href="#">Contact</a></li>
+				<li
+					class:bg-white={activeTab === 'Home'}
+					class:text-black={activeTab === 'Home'}
+					class:bg-black={activeTab !== 'Home'}
+					class:text-white={activeTab !== 'Home'}
+					class="px-4 py-2 rounded-full font-medium cursor-pointer transition-all duration-300 ease-in-out"
+					onclick={() => handleTabClick('Home')}
+				>
+					<a href="#">Home</a>
+				</li>
+				<li
+					class:bg-white={activeTab === 'Projects'}
+					class:text-black={activeTab === 'Projects'}
+					class:bg-black={activeTab !== 'Projects'}
+					class:text-white={activeTab !== 'Projects'}
+					class="px-4 py-2 rounded-full font-medium cursor-pointer transition-all duration-300 ease-in-out"
+					onclick={() => handleTabClick('Projects')}
+				>
+					<a href="#">Projects</a>
+				</li>
+				<!-- svelte-ignore a11y_click_events_have_key_events -->
+				<li
+					class:bg-white={activeTab === 'About'}
+					class:text-black={activeTab === 'About'}
+					class:bg-black={activeTab !== 'About'}
+					class:text-white={activeTab !== 'About'}
+					class="px-4 py-2 rounded-full font-medium cursor-pointer transition-all duration-300 ease-in-out"
+					onclick={() => handleTabClick('About')}
+				>
+					<a href="#">About</a>
+				</li>
+				<!-- svelte-ignore a11y_click_events_have_key_events -->
+				<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+				<li
+					class:bg-white={activeTab === 'Contact'}
+					class:text-black={activeTab === 'Contact'}
+					class:bg-black={activeTab !== 'Contact'}
+					class:text-white={activeTab !== 'Contact'}
+					class="px-4 py-2 rounded-full font-medium cursor-pointer transition-all duration-300 ease-in-out"
+					onclick={() => handleTabClick('Contact')}
+				>
+					<a href="#">Contact</a>
+				</li>
 			</ul>
 		</nav>
 	</header>
@@ -27,9 +75,9 @@
 			<h1 class="mb-0">Branding</h1>
 		</div>
 	</div>
-	<div class="relative">
+	<div class="relative cursor-pointer">
 		<h1
-			class="uppercase absolute left-[70%] pb-[5%] pl-[3%] bottom-[35%] text-2xl font-bold flex items-center gap-2"
+			class="uppercase absolute left-[70%] pb-[5%] pl-[3%] bottom-[35%] text-2xl font-bold flex items-center gap-2 hover:animate-bouncesmall"
 		>
 			Scroll Down <svg
 				width="20"
@@ -55,6 +103,7 @@
 			</svg>
 		</h1>
 	</div>
+
 	<div class="pt-16 flex justify-between">
 		<div class="text-2xl">
 			<h1 class="pb-2 font-bold">Lets Talk</h1>

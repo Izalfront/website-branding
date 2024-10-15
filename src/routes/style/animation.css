@@ -1,0 +1,17 @@
+@keyframes bouncesmall {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10%);
+		animation-timing-function: ease-in-out;
+	}
+	100% {
+		transform: translateY(0);
+		animation-timing-function: ease-in-out;
+	}
+}
+
+.hover\:animate-bouncesmall:hover {
+	animation: bouncesmall 1.5s ease-in-out infinite;
+}
