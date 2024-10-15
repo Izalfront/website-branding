@@ -2,7 +2,7 @@
 
 <div>
 	<h1 class="text-4xl font-semibold pt-24 pb-10">Testimonials</h1>
-	<div class="flex justify-between items-end">
+	<div class="sm:flex sm:justify-between sm:items-end">
 		<p class="whitespace-pre-line text-2xl">
 			“Joey is a remarkable artist. He grasps abstract ideas and transforms them into exceptional
 			visuals. Throughout the years, I've witnessed him produce everything from small symbols to

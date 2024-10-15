@@ -12,6 +12,6 @@
 	}
 }
 
-.hover\:animate-bouncesmall:hover {
+.animate-bouncesmall {
 	animation: bouncesmall 1.5s ease-in-out infinite;
 }

@@ -1,7 +1,7 @@
 <script lang="ts"></script>
 
 <div class="text-center pt-64 pb-12">
-	<p class="text-[7rem] font-semibold pb-12">Let’s talk!</p>
+	<p class="text-[4rem] sm:text-[5rem] md:text-[7rem] font-semibold pb-12">Let’s talk!</p>
 	<button
 		class="bg-black py-8 px-14 rounded-full text-white flex items-center mx-auto gap-2 hover:animate-pulse"
 	>

@@ -1,85 +1,100 @@
 <script lang="ts">
 	import CardContent from '../Cards/CardContent.svelte';
 	import DescriptionContent from '../Descriptions/DescriptionContent.svelte';
+	import { onMount } from 'svelte';
 
 	let activeTab = 'Home'; // Default tab
+	let isMenuOpen = false;
 
 	// Function to handle tab click
 	const handleTabClick = (tab: string) => {
 		activeTab = tab;
+		isMenuOpen = false;
 	};
+
+	// Toggle menu for mobile
+	const toggleMenu = () => {
+		isMenuOpen = !isMenuOpen;
+	};
+
+	// Close menu when clicking outside
+	onMount(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			const target = event.target as HTMLElement;
+			if (!target.closest('nav') && !target.closest('#menuToggle')) {
+				isMenuOpen = false;
+			}
+		};
+
+		document.addEventListener('click', handleClickOutside);
+
+		return () => {
+			document.removeEventListener('click', handleClickOutside);
+		};
+	});
 </script>
 
-<div>
+<div class="px-4 md:px-0">
 	<div class="flex items-center justify-center pt-8 pb-10">
-		<img class="w-20" src="./Joey.png" alt="" />
+		<img class="w-20" src="./Joey.png" alt="Joey logo" />
 	</div>
 	<!-- Header start -->
-	<header>
-		<nav>
-			<!-- svelte-ignore a11y_click_events_have_key_events -->
-			<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+	<header class="relative">
+		<nav class="flex justify-center md:block">
+			<!-- Mobile menu button -->
+			<!-- svelte-ignore a11y_consider_explicit_label -->
+			<button id="menuToggle" class="md:hidden z-50" on:click={toggleMenu}>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="h-6 w-6"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M4 6h16M4 12h16M4 18h16"
+					/>
+				</svg>
+			</button>
+			<!-- Desktop and Mobile menu -->
 			<ul
-				class="flex space-x-4 items-center justify-center py-1 px-1 bg-black text-white rounded-full w-fit mx-auto"
+				class="{isMenuOpen
+					? 'flex'
+					: 'hidden'} md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 items-center justify-center md:py-1 md:px-1 bg-black text-white sm:rounded-full md:w-fit sm:mx-auto absolute md:relative top-10 left-0 right-0 md:top-auto z-40"
 			>
-				<li
-					class:bg-white={activeTab === 'Home'}
-					class:text-black={activeTab === 'Home'}
-					class:bg-black={activeTab !== 'Home'}
-					class:text-white={activeTab !== 'Home'}
-					class="px-4 py-2 rounded-full font-medium cursor-pointer transition-all duration-300 ease-in-out"
-					onclick={() => handleTabClick('Home')}
-				>
-					<a href="#">Home</a>
-				</li>
-				<li
-					class:bg-white={activeTab === 'Projects'}
-					class:text-black={activeTab === 'Projects'}
-					class:bg-black={activeTab !== 'Projects'}
-					class:text-white={activeTab !== 'Projects'}
-					class="px-4 py-2 rounded-full font-medium cursor-pointer transition-all duration-300 ease-in-out"
-					onclick={() => handleTabClick('Projects')}
-				>
-					<a href="#">Projects</a>
-				</li>
-				<!-- svelte-ignore a11y_click_events_have_key_events -->
-				<li
-					class:bg-white={activeTab === 'About'}
-					class:text-black={activeTab === 'About'}
-					class:bg-black={activeTab !== 'About'}
-					class:text-white={activeTab !== 'About'}
-					class="px-4 py-2 rounded-full font-medium cursor-pointer transition-all duration-300 ease-in-out"
-					onclick={() => handleTabClick('About')}
-				>
-					<a href="#">About</a>
-				</li>
-				<!-- svelte-ignore a11y_click_events_have_key_events -->
-				<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-				<li
-					class:bg-white={activeTab === 'Contact'}
-					class:text-black={activeTab === 'Contact'}
-					class:bg-black={activeTab !== 'Contact'}
-					class:text-white={activeTab !== 'Contact'}
-					class="px-4 py-2 rounded-full font-medium cursor-pointer transition-all duration-300 ease-in-out"
-					onclick={() => handleTabClick('Contact')}
-				>
-					<a href="#">Contact</a>
-				</li>
+				{#each ['Home', 'Projects', 'About', 'Contact'] as tab}
+					<!-- svelte-ignore a11y_click_events_have_key_events -->
+					<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+					<li
+						class="w-full md:w-auto text-center {activeTab === tab
+							? 'bg-white text-black'
+							: 'bg-black text-white'} px-4 py-2 rounded-full font-medium cursor-pointer transition-all duration-300 ease-in-out"
+						on:click={() => handleTabClick(tab)}
+					>
+						<!-- svelte-ignore a11y_invalid_attribute -->
+						<a href="#">{tab}</a>
+					</li>
+				{/each}
 			</ul>
 		</nav>
 	</header>
+
 	<!-- header end -->
-	<div class="flex items-center justify-start pt-12 pb-12 text-[16rem]">
+	<div class="flex items-center justify-start pt-12 pb-12 text-5xl md:text-[16rem]">
 		<div class="block font-semibold leading-none">
 			<h1 class="mb-0">Websites&</h1>
 			<h1 class="mb-0">Branding</h1>
 		</div>
 	</div>
-	<div class="relative cursor-pointer">
+	<div class="relative cursor-pointer hidden md:block">
 		<h1
-			class="uppercase absolute left-[70%] pb-[5%] pl-[3%] bottom-[35%] text-2xl font-bold flex items-center gap-2 hover:animate-bouncesmall"
+			class="uppercase absolute left-[70%] pb-[5%] pl-[3%] bottom-[35%] text-2xl font-bold flex items-center gap-2 animate-bouncesmall"
 		>
-			Scroll Down <svg
+			Scroll Down
+			<svg
 				width="20"
 				height="20"
 				viewBox="0 0 13 16"
@@ -104,16 +119,16 @@
 		</h1>
 	</div>
 
-	<div class="pt-16 flex justify-between">
-		<div class="text-2xl">
+	<div class="pt-16 flex flex-col md:flex-row justify-between gap-8 md:gap-0">
+		<div class="text-xl md:text-2xl">
 			<h1 class="pb-2 font-bold">Lets Talk</h1>
 			<h1 class="font-normal">hello@joey.co</h1>
 		</div>
 
 		<div>
-			<h1 class="text-2xl">
-				Hello, I'm Joey, an online product designer focusing <br /> on brand identity, advertising,
-				and no-code <br /> instruments.
+			<h1 class="text-xl md:text-2xl">
+				Hello, I'm Joey, an online product designer focusing <br class="hidden md:inline" /> on
+				brand identity, advertising, and no-code <br class="hidden md:inline" /> instruments.
 			</h1>
 		</div>
 	</div>

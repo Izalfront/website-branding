@@ -7,11 +7,11 @@
 	import './style/animation.css';
 </script>
 
-<div class="mx-24">
+<div class="mx-10 md:mx-24 sm:mx-10">
 	<HomePage />
 </div>
 <Ads />
-<div class="mx-24">
+<div class="mx-10 md:mx-24 sm:mx-10">
 	<Testimonials />
 	<Contact />
 	<Footer />

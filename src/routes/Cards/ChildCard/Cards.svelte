@@ -24,7 +24,7 @@
 </script>
 
 <div>
-	<div class="grid grid-cols-2 gap-6">
+	<div class="grid md:grid-cols-2 gap-6 sm:grid-cols-1">
 		{#each data as datas}
 			<div class="grid">
 				<img class="w-full h-full" src={datas.image} alt="" />

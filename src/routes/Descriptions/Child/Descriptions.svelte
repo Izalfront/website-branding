@@ -35,7 +35,7 @@
 	];
 </script>
 
-<div class="grid grid-cols-2 gap-x-80">
+<div class="grid md:grid-cols-2 sm:grid-cols-1 gap-x-80">
 	{#each desc as description}
 		<div class="pt-12">
 			<h1 class="font-semibold text-2xl py-6 pr-64">{description.title}</h1>
