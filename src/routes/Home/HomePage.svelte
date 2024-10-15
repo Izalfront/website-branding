@@ -1,5 +1,6 @@
 <script lang="ts">
 	import CardContent from '../Cards/CardContent.svelte';
+	import DescriptionContent from '../Descriptions/DescriptionContent.svelte';
 </script>
 
 <div>
@@ -67,9 +68,10 @@
 			</h1>
 		</div>
 	</div>
-	<!-- Content Cards -->
 	<div>
 		<CardContent />
 	</div>
-	<!-- end Cards -->
+	<div>
+		<DescriptionContent />
+	</div>
 </div>
