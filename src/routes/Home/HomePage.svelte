@@ -35,7 +35,10 @@
 </script>
 
 <div class="px-4 md:px-0">
-	<div class="md:block flex justify-between items-center">
+	<div
+		class="md:block mx-10 flex justify-between items-center bg-white fixed top-0 left-0 right-0 z-50"
+	>
+		<!--   class="fixed top-0 left-0 right-0 bg-white shadow-md z-50" -->
 		<div
 			data-sal-delay="300"
 			data-sal="slide-down"
@@ -97,7 +100,7 @@
 		data-sal-delay="500"
 		data-sal="slide-up"
 		data-sal-duration="500"
-		class="flex items-center justify-start pt-12 pb-12 text-5xl md:text-[16rem]"
+		class="flex items-center justify-start pt-72 pb-12 text-7xl md:text-[16rem]"
 	>
 		<div class="block font-semibold leading-none">
 			<h1 class="mb-0">Websites&</h1>
