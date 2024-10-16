@@ -36,7 +36,7 @@
 
 <div class="px-4 md:px-0">
 	<div
-		class="md:block mx-10 flex justify-between items-center bg-white fixed top-0 left-0 right-0 z-50"
+		class="md:block px-10 flex justify-between items-center bg-white md:pb-8 fixed top-0 left-0 right-0 z-50"
 	>
 		<!--   class="fixed top-0 left-0 right-0 bg-white shadow-md z-50" -->
 		<div
