@@ -15,3 +15,6 @@
 .animate-bouncesmall {
 	animation: bouncesmall 1.5s ease-in-out infinite;
 }
+.animate-bouncesmall2 {
+	animation: bouncesmall 2.5s ease-in-out infinite;
+}

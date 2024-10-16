@@ -38,8 +38,20 @@
 <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-x-80">
 	{#each desc as description}
 		<div class="pt-12">
-			<h1 class="font-semibold text-2xl py-6 pr-64">{description.title}</h1>
-			<p class="font-normal text-xl whitespace-pre-line">
+			<h1
+				data-sal-delay="300"
+				data-sal="slide-up"
+				data-sal-duration="500"
+				class="font-semibold text-2xl py-6 pr-64"
+			>
+				{description.title}
+			</h1>
+			<p
+				data-sal-delay="400"
+				data-sal="slide-up"
+				data-sal-duration="500"
+				class="font-normal text-xl whitespace-pre-line pr-12 sm:pr-5 md:pr-0"
+			>
 				{description.description}
 			</p>
 		</div>

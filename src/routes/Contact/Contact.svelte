@@ -1,8 +1,18 @@
 <script lang="ts"></script>
 
 <div class="text-center pt-64 pb-12">
-	<p class="text-[4rem] sm:text-[5rem] md:text-[7rem] font-semibold pb-12">Let’s talk!</p>
+	<p
+		data-sal-delay="300"
+		data-sal="slide-up"
+		data-sal-duration="500"
+		class="text-[4rem] sm:text-[5rem] md:text-[7rem] font-semibold pb-12 animate-bouncesmall2"
+	>
+		Let’s talk!
+	</p>
 	<button
+		data-sal-delay="500"
+		data-sal="slide-up"
+		data-sal-duration="500"
 		class="bg-black py-8 px-14 rounded-full text-white flex items-center mx-auto gap-2 hover:animate-pulse"
 	>
 		<span class="text-lg">hello@joey.co</span>

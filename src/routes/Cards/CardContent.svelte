@@ -4,8 +4,20 @@
 
 <div class="pt-28">
 	<div>
-		<h1 class="text-4xl font-semibold">Projects</h1>
-		<div class="flex justify-between items-center">
+		<h1
+			data-sal-delay="300"
+			data-sal="slide-right"
+			data-sal-duration="500"
+			class="text-4xl font-semibold"
+		>
+			Projects
+		</h1>
+		<div
+			data-sal-delay="500"
+			data-sal="slide-up"
+			data-sal-duration="500"
+			class="flex justify-between items-center"
+		>
 			<p class="text-2xl pt-6">
 				As a seasoned creator of contemporary,<br /> user-friendly web designs and digital
 				<br />solutions, I aim to assist you in constructing <br /> the brand of your fantasies.

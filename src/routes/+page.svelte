@@ -5,6 +5,13 @@
 	import HomePage from './Home/HomePage.svelte';
 	import Testimonials from './Testimonials/Testimonials.svelte';
 	import './style/animation.css';
+	// import sal from 'sal.js';
+	// import 'sal.js/dist/sal.css';
+	import { onMount } from 'svelte';
+
+	// onMount(() => {
+	// 	// sal();
+	// });
 </script>
 
 <div class="mx-10 md:mx-24 sm:mx-10">

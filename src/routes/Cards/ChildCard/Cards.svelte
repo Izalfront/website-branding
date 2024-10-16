@@ -27,8 +27,15 @@
 	<div class="grid md:grid-cols-2 gap-6 sm:grid-cols-1">
 		{#each data as datas}
 			<div class="grid">
-				<img class="w-full h-full" src={datas.image} alt="" />
-				<div class="pt-6 text-xl">
+				<img
+					data-sal-delay="300"
+					data-sal="slide-up"
+					data-sal-duration="500"
+					class="w-full h-full"
+					src={datas.image}
+					alt=""
+				/>
+				<div data-sal-delay="400" data-sal="slide-up" data-sal-duration="500" class="pt-6 text-xl">
 					<h1 class="font-bold">{datas.name}</h1>
 					<h1>{datas.title}</h1>
 				</div>
