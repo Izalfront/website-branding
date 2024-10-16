@@ -51,7 +51,7 @@
 				<!-- svelte-ignore a11y_consider_explicit_label -->
 				<button
 					id="menuToggle"
-					class="md:hidden z-50 bg-black text-white p-2 rounded-full"
+					class="md:hidden z-20 bg-black text-white p-2 rounded-full"
 					on:click={toggleMenu}
 				>
 					<svg
@@ -73,9 +73,8 @@
 				<ul
 					class="{isMenuOpen
 						? 'flex'
-						: 'translate-x-full'} md:translate-x-0 md:opacity-100 transition-all duration-300 ease-in-out fixed md:relative top-0 right-0 h-full w-64 md:w-fit md:mx-auto flex flex-col md:flex-row p-4 md:p-1 space-y-2 md:space-y-0 md:space-x-4 items-start justify-start md:items-center bg-black text-white md:bg-black md:rounded-full z-40"
+						: 'translate-x-full'} md:translate-x-0 md:opacity-100 transition-all duration-300 ease-in-out fixed md:relative top-0 right-0 h-fit w-64 md:w-fit md:mx-auto flex flex-col md:flex-row p-4 md:p-1 space-y-2 md:space-y-0 md:space-x-4 items-start justify-start md:items-center bg-black text-white md:bg-black md:rounded-full z-40 rounded-bl-2xl"
 				>
-					<!-- md:flex flex-col p-2 md:flex-row space-y-2 md:space-y-0 md:space-x-4 items-start justify-start md:justify-end md:py-1 md:px-1 bg-black text-white sm:rounded-full md:w-fit sm:mx-auto absolute md:relative top left-0 right-0 md:top-auto h-full w-64 z-40" -->
 					<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 					{#each ['Home', 'Projects', 'About', 'Contact'] as tab}
 						<!-- svelte-ignore a11y_click_events_have_key_events -->
