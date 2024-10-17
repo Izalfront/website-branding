@@ -35,6 +35,7 @@ If you're interested in checking out the original design on Figma, you can find 
 - **HTML**
 - **CSS (Tailwind CSS)**
 - **Typescript**
+- **Javascript**
 
 ## Installation
 1. Clone the repository:
