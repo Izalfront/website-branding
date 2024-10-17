@@ -10,12 +10,7 @@
 		Testimonials
 	</h1>
 	<div class="sm:flex sm:justify-between sm:items-end">
-		<p
-			data-sal-delay="400"
-			data-sal="slide-up"
-			data-sal-duration="500"
-			class="whitespace-pre-line text-xl pb-8"
-		>
+		<p data-sal-delay="400" data-sal="slide-up" data-sal-duration="500" class=" text-xl pb-8 mr-6">
 			“Joey is a remarkable artist. He grasps abstract ideas and transforms them into exceptional
 			visuals. Throughout the years, I've witnessed him produce everything from small symbols to
 			comprehensive adaptive web pages. He has crafted clothing items like tees and caps,
