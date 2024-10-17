@@ -101,7 +101,7 @@
 		data-sal-delay="500"
 		data-sal="slide-up"
 		data-sal-duration="500"
-		class="flex items-center justify-start pt-72 pb-12 text-5xl sm:text-2xl md:text-4xl lg:text-[12rem]"
+		class="flex items-center justify-start pt-72 pb-12 text-5xl sm:text-2xl md:text-9xl lg:text-[12rem]"
 	>
 		<div class="block font-semibold leading-none">
 			<h1 class="mb-0">Websites&</h1>
