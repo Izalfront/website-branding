@@ -5,6 +5,9 @@
 	import HomePage from './Home/HomePage.svelte';
 	import Testimonials from './Testimonials/Testimonials.svelte';
 	import { onMount } from 'svelte';
+	import 'sal.js/dist/sal.css';
+	import sal from 'sal.js';
+	import './style/animation.css';
 
 	let isDarkMode = false;
 
@@ -31,6 +34,10 @@
 			isDarkMode = true;
 		}
 	});
+
+	onMount(() => {
+		sal();
+	});
 </script>
 
 <div class="text-black bg-white dark:bg-black dark:text-white">
@@ -51,11 +58,3 @@
 		<Footer />
 	</div>
 </div>
-
-<!-- // import sal from 'sal.js';
-// import 'sal.js/dist/sal.css';
-import { onMount } from 'svelte';
-
-// onMount(() => {
-// 	// sal();
-// }); -->
