@@ -50,7 +50,7 @@
 				data-sal-delay="400"
 				data-sal="slide-up"
 				data-sal-duration="500"
-				class="font-normal text-xl whitespace-pre-line"
+				class="font-normal text-xl"
 			>
 				{description.description}
 			</p>

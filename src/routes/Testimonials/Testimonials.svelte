@@ -14,7 +14,7 @@
 			data-sal-delay="400"
 			data-sal="slide-up"
 			data-sal-duration="500"
-			class="whitespace-pre-line text-2xl pb-8"
+			class="whitespace-pre-line text-xl pb-8"
 		>
 			“Joey is a remarkable artist. He grasps abstract ideas and transforms them into exceptional
 			visuals. Throughout the years, I've witnessed him produce everything from small symbols to
