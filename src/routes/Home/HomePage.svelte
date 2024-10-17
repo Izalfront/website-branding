@@ -34,18 +34,18 @@
 	});
 </script>
 
-<div class="px-4 md:px-0">
+<div class="px-4 md:px-0 lg:px-16">
 	<div
-		class="md:block px-10 flex justify-between items-center bg-white md:pb-8 fixed top-0 left-0 right-0 z-50"
+		class="md:block px-10 lg:px-20 flex justify-between items-center bg-white md:pb-8 fixed top-0 left-0 right-0 z-50"
 	>
 		<!--   class="fixed top-0 left-0 right-0 bg-white shadow-md z-50" -->
 		<div
 			data-sal-delay="300"
 			data-sal="slide-down"
 			data-sal-duration="500"
-			class="flex items-center justify-center pt-8 pb-10"
+			class="flex items-center justify-center pt-8 pb-10 lg:pt-12 lg:pb-14"
 		>
-			<img class="w-20" src="./Joey.png" alt="Joey logo" />
+			<img class="w-20 md:w-28 lg:w-36" src="./Joey.png" alt="Joey logo" />
 		</div>
 		<!-- Header start -->
 		<header data-sal-delay="300" data-sal="slide-up" data-sal-duration="500" class="relative">
@@ -96,11 +96,12 @@
 		</header>
 	</div>
 	<!-- header end -->
+
 	<div
 		data-sal-delay="500"
 		data-sal="slide-up"
 		data-sal-duration="500"
-		class="flex items-center justify-start pt-72 pb-12 text-7xl md:text-[16rem]"
+		class="flex items-center justify-start pt-72 pb-12 text-7xl sm:text-[8rem] md:text-[12rem] lg:text-[16rem]"
 	>
 		<div class="block font-semibold leading-none">
 			<h1 class="mb-0">Websites&</h1>
@@ -114,7 +115,7 @@
 		class="relative cursor-pointer hidden md:block"
 	>
 		<h1
-			class="uppercase absolute left-[70%] pb-[5%] pl-[3%] bottom-[35%] text-2xl font-bold flex items-center gap-2 animate-bouncesmall"
+			class="uppercase absolute left-[60%] md:left-[70%] px-6 lg:left-[75%] pb-[5%] pl-[3%] bottom-[2rem] text-2xl lg:text-3xl font-bold flex items-center gap-2 animate-bouncesmall"
 		>
 			Scroll Down
 			<svg
@@ -141,7 +142,6 @@
 			</svg>
 		</h1>
 	</div>
-
 	<div
 		data-sal-delay="800"
 		data-sal="slide-up"
