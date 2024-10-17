@@ -1,6 +1,6 @@
 <script lang="ts"></script>
 
-<div class="text-center pt-64 pb-12">
+<div class="text-center pt-64 pb-12 bg-white text-black dark:bg-black dark:text-white">
 	<p
 		data-sal-delay="300"
 		data-sal="slide-up"
@@ -13,7 +13,7 @@
 		data-sal-delay="500"
 		data-sal="slide-up"
 		data-sal-duration="500"
-		class="bg-black py-8 px-14 rounded-full text-white flex items-center mx-auto gap-2 hover:animate-pulse"
+		class="bg-black py-8 px-14 rounded-full text-white flex items-center mx-auto gap-2 hover:animate-pulse dark:bg-[#141414] dark:text-white"
 	>
 		<span class="text-lg">hello@joey.co</span>
 		<svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">

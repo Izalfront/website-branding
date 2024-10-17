@@ -1,6 +1,6 @@
 <script lang="ts"></script>
 
-<div>
+<div class="bg-white text-black dark:bg-black dark:text-white">
 	<h1
 		data-sal-delay="300"
 		data-sal="slide-right"
