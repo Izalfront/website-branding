@@ -21,7 +21,7 @@
 			comprehensive adaptive web pages. He has crafted clothing items like tees and caps,
 			promotional products, and professional literature.”
 		</p>
-		<div data-sal-delay="500" data-sal="slide-up" data-sal-duration="500" class="pr-64">
+		<div data-sal-delay="500" data-sal="slide-up" data-sal-duration="500">
 			<span class="font-semibold">Chris Ellington</span>
 			<p class="text-start">Product Lead,Gatha.</p>
 		</div>

@@ -42,7 +42,7 @@
 				data-sal-delay="300"
 				data-sal="slide-up"
 				data-sal-duration="500"
-				class="font-semibold text-2xl py-6 pr-64"
+				class="font-semibold text-2xl py-6"
 			>
 				{description.title}
 			</h1>
@@ -50,7 +50,7 @@
 				data-sal-delay="400"
 				data-sal="slide-up"
 				data-sal-duration="500"
-				class="font-normal text-xl whitespace-pre-line pr-12 sm:pr-5 md:pr-0"
+				class="font-normal text-xl whitespace-pre-line"
 			>
 				{description.description}
 			</p>

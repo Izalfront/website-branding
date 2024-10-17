@@ -101,7 +101,7 @@
 		data-sal-delay="500"
 		data-sal="slide-up"
 		data-sal-duration="500"
-		class="flex items-center justify-start pt-72 pb-12 text-7xl sm:text-[8rem] md:text-[12rem] lg:text-[16rem]"
+		class="flex items-center justify-start pt-72 pb-12 text-5xl sm:text-2xl md:text-4xl lg:text-[12rem]"
 	>
 		<div class="block font-semibold leading-none">
 			<h1 class="mb-0">Websites&</h1>
@@ -115,7 +115,7 @@
 		class="relative cursor-pointer hidden md:block"
 	>
 		<h1
-			class="uppercase absolute left-[60%] md:left-[70%] px-6 lg:left-[75%] pb-[5%] pl-[3%] bottom-[2rem] text-2xl lg:text-3xl font-bold flex items-center gap-2 animate-bouncesmall"
+			class="uppercase absolute left-[60%] md:left-[70%] px-6 lg:left-[75%] pb-[5%] pl-[3%] bottom-[2rem] text-lg lg:text-xl font-bold flex items-center gap-2 animate-bouncesmall"
 		>
 			Scroll Down
 			<svg
